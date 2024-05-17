@@ -1,0 +1,264 @@
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+/* .container {
+    display: flex;
+} */
+section#aside-and-boxes {
+
+    display: flex;
+    justify-content: space-between;
+
+}
+
+header, main, footer, nav, aside, section, div  {
+
+    display: block;
+
+}
+
+
+
+body {
+
+    background-color: #E8C59C;
+
+}
+
+
+
+header {
+
+    height: 130px;
+
+    /* background-color: greenyellow */  /* TEMP */
+
+    padding-top: 1px;               /* Fix the margin collapse above the header */
+}
+
+
+
+#logo {
+
+    display: block;
+
+    background: url("../images/big-bang-theory-logo.png");
+
+    background-repeat: no-repeat;
+
+    background-size: cover;
+
+    height: 118px;
+
+    width: 306px;
+
+    margin-top: 6px;
+
+    margin-left: 8px;
+
+}
+
+
+
+#wrapper {
+
+    width: 1400px;
+    margin: 0 auto;
+
+}
+
+
+
+section#content {
+
+    background: url("../images/big-bang-theory-bg.png");
+
+    background-repeat: no-repeat;
+
+    background-size: cover;
+
+    height: 700px;
+
+    padding-top: 1px;
+
+    margin-bottom: 70px;
+
+    border-radius: 5px;
+
+}
+
+
+
+aside {
+
+    margin-top:8px ;
+
+    margin-left:8px ;
+
+    height: 607px;
+
+    width: 377px;
+
+    /* background-color: palevioletred; */  /* #E8C59C; */
+
+    opacity: 0.5;
+
+}
+
+
+
+main {
+
+
+    height: 615px;
+
+    width: 616px;
+
+     /* background-color: teal; */  /* Transparent */
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-content: flex-start;
+
+}
+
+
+
+footer {
+
+    margin-top: 8px;
+
+    margin-left: 8px;
+
+    height: 69px;
+
+    width: 1384px;
+
+    /* background-color: black */  /* #E8C59C; */
+
+    opacity: 0.5;
+
+}
+
+
+
+/* Inside main */
+
+
+
+main > section {    /* (> is for first generation children) */
+
+    background-color: #E8C59C ;
+
+    height: 100px;
+
+    width: 300px;
+
+    border-radius: 5px;         /* round edges */
+
+    margin-top: 8px;
+
+    margin-right: 8px;
+
+    display: flex;
+
+}
+
+
+
+main > section > img  {
+
+    height: 87px;
+
+    width: 130px; 
+
+    margin-top: 7px;
+
+    margin-left: 5px;
+
+}
+
+
+
+main > section > p  {
+
+    color: #ffffff;
+
+    font-family: arial;
+
+    font-weight: bold;
+
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    margin-top: 12px;
+
+    margin-left: 8px;
+
+}
+
+
+
+.play-button {
+
+    background: url("../images/movie-player-button.png");
+
+    height: 28px;
+
+    width: 28px;
+
+    position: absolute;
+
+    margin-top: 36px;
+
+    margin-left: 56px;
+
+}
+
+@media (max-width: 1420px){
+
+    body {
+        background-color: black;
+    }
+
+    aside, footer {
+        display: none;
+    }
+
+    #wrapper, main {
+        margin: 0 auto;
+        width: 300px;
+    }
+
+    section#content {
+        background: none;
+    }
+
+    header {
+        height: 100px;
+    }
+
+    #logo {
+        height: 67px ;
+        width: 175px ;
+        margin-top: 17px ;
+        margin: 0 auto;
+    }
+
+}
+
+@media (min-width : 800px) and (max-width:1420px) {    /* Tablet layout */
+
+    #wrapper,main,
+    main > section {
+        width:600px;
+    }
+}
