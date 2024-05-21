@@ -15,18 +15,22 @@ header, main, footer, nav, aside, section, div  {
   }
 
 body {
-   /*  display: flex;
-    min-height: 100vh;
-    flex-direction: column; */
+   
     background-color: #ffffff;
 }
 
 
 #wrapper {
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    margin: 0 auto;
+    margin: 0 auto; */
+    margin:0 32px;
+    
 }
+
+
+
+
 /* Header Section */
 
 header {
@@ -332,6 +336,7 @@ footer{
     position: fixed;
     bottom: 0;
     width: 100%;
+    
 }
 
 #footer-links-section h2 {
@@ -551,11 +556,11 @@ footer a {
     max-width: 500px; 
 }
 
-.contact-form h2 {
+/* .contact-form h2 {
     margin-bottom: 20px;
     font-size: 24px;
     font-family: "Merriweather";
-}
+} */
 .contact-form .form-group {
     margin-bottom: 15px;
 }
