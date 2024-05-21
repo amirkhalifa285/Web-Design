@@ -3,47 +3,39 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-header, main, footer, nav, aside, section, div  {
+header,
+main,
+footer,
+nav,
+aside,
+section,
+div {
     display: block;
 }
-
 .merriweather-regular {
     font-family: "Merriweather", serif;
     font-weight: 400;
     font-style: normal;
-  }
-
+}
 body {
-   
+
     background-color: #ffffff;
 }
-
-
 #wrapper {
-    /* display: flex;
-    justify-content: center;
-    margin: 0 auto; */
-    margin:0 32px;
-    
+
+    margin: 0 32px;
+
 }
-
-
-
-
 /* Header Section */
-
 header {
     height: 128px;
-    background-color:white;
+    background-color: white;
     padding-top: 1px;
     display: flex;
 }
 header a {
-    text-decoration: none;      /* Remove underline */
+    text-decoration: none;
 }
-
-
 #logo {
     background: url("../images/logo.jpg");
     background-repeat: no-repeat;
@@ -54,11 +46,10 @@ header a {
     margin-top: 32px;
     margin-left: 32px;
 }
-
 #logoName {
     display: inline;
     font-family: "Merriweather";
-    color:#612999;
+    color: #612999;
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
@@ -68,7 +59,6 @@ header a {
     padding-top: 53px;
 
 }
-
 nav {
     margin-left: auto;
     margin-right: auto;
@@ -78,42 +68,35 @@ nav {
     list-style-type: none;
     text-align: center;
 }
-
 nav a {
     display: inline-block;
     color: #612999;
-    font-family:"Merriweather";
+    font-family: "Merriweather";
     font-size: 30px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     margin-right: 64px;
 }
-
 nav a:hover {
-    color:darkmagenta;
+    color: darkmagenta;
 }
-
 #Home {
     font-weight: 700;
 }
 main {
     flex: 1;
     padding-bottom: 287px;
-    
-}
 
+}
 #Home-2 {
     font-weight: 400;
 }
 #our-gloves-pg2 {
     font-weight: 700;
 }
-
 /* Main Section Page 1*/
 /* Cover Photo*/
-
-
 #cover-photo-sec {
     width: 100%;
     height: 797px;
@@ -122,8 +105,7 @@ main {
     background-position: top left;
     background-size: cover;
 }
-
-#cover-photo-sec h1{
+#cover-photo-sec h1 {
     position: absolute;
     align-items: center;
     top: 160px;
@@ -131,37 +113,33 @@ main {
     width: 448px;
     height: 120px;
     color: black;
-    font-family:"Merriweather" ;
+    font-family: "Merriweather";
     font-size: 96px;
     font-style: normal;
     font-weight: 800;
     line-height: normal;
 }
-
-#cover-photo-sec p{
+#cover-photo-sec p {
     position: absolute;
     top: 281px;
     left: 32px;
     width: 448px;
     height: 99px;
-    color:black;
-    font-family:"Merriweather";
+    color: black;
+    font-family: "Merriweather";
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
 }
-
 /*paragraphs section */
-
-#paragraphs-sec{
+#paragraphs-sec {
     margin-top: 32px;
     margin-left: 32px;
 }
-
 #paragraphs-sec h2 {
-    color:#612999 ;
-    font-family:"Merriweather" ;
+    color: #612999;
+    font-family: "Merriweather";
     font-size: 40px;
     font-style: bold;
     font-weight: 800;
@@ -171,7 +149,6 @@ main {
     flex-shrink: 0;
     margin-bottom: 32px;
 }
-
 #paragraphs-sec p {
     color: #000;
     text-align: justify;
@@ -185,9 +162,7 @@ main {
     flex-shrink: 0;
     margin-bottom: 24px;
 }
-
 /*Cards Section */
-
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -196,25 +171,23 @@ main {
     margin-left: 32px;
     margin-right: 384px;
 }
-
 .container h2 {
     width: 100%;
     display: block;
     height: 40px;
     color: #612999;
-    font-family:"Merriweather";
+    font-family: "Merriweather";
     font-size: 40px;
     font-style: normal;
     font-weight: 800;
     line-height: 40px;
     margin-bottom: 27px;
 }
-
 .card {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    width: 376px; 
+    width: 376px;
     height: 496px;
     flex-shrink: 0;
     border-radius: 38px;
@@ -223,22 +196,18 @@ main {
     margin-right: 19px;
     margin-bottom: 27px;
 }
-
 .container :last-child {
     margin-bottom: 32px;
 }
-
 .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
-
-.card > img {
+.card>img {
     width: 389px;
     height: 281px;
     flex-shrink: 0;
     border-radius: 38px;
 }
-
 .card h4 {
     color: #000;
     text-align: justify;
@@ -253,7 +222,6 @@ main {
     margin-bottom: 7px;
 
 }
-
 .cardParagraph {
     color: #333;
     font-family: "Merriweather";
@@ -267,7 +235,6 @@ main {
     margin-left: 32px;
     margin-bottom: 12px;
 }
-
 .price {
     color: #612999;
     text-align: justify;
@@ -279,7 +246,6 @@ main {
     margin-left: 32px;
     padding-bottom: 36px;
 }
-
 .ellipse {
     background-image: url(../images/Ellipse-cart-1.png);
     background-repeat: no-repeat;
@@ -291,7 +257,6 @@ main {
     margin-left: 280px;
     margin-top: 406px;
 }
-
 .basket {
     background-image: url(../images/shopping-basket1.png);
     position: absolute;
@@ -301,7 +266,6 @@ main {
     margin-left: 296px;
     margin-top: 420px;
 }
-
 .heartCircle {
     background-image: url(../images/Ellipse\ heart\ 1.png);
     background-repeat: no-repeat;
@@ -313,7 +277,6 @@ main {
     margin-left: 290px;
     margin-top: 40px;
 }
-
 .heartButton {
     background-image: url(../images/heart\ 1.png);
     position: absolute;
@@ -324,11 +287,8 @@ main {
     margin-left: 302px;
     margin-top: 54px;
 }
-
-
 /* Footer */
-
-footer{
+footer {
     background-color: #EFECFF;
     height: 287px;
     display: flex;
@@ -336,55 +296,48 @@ footer{
     position: fixed;
     bottom: 0;
     width: 100%;
-    
-}
 
+}
 #footer-links-section h2 {
     color: #333;
-    font-family:"Merriweather";
+    font-family: "Merriweather";
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
     line-height: 28px;
     text-transform: uppercase;
 }
-
 #footer-links-section1 h2 {
     color: #333;
-    font-family:"Merriweather";
+    font-family: "Merriweather";
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
     line-height: 28px;
     text-transform: uppercase;
 }
-
 #footer-social-links-section h2 {
     color: #333;
-    font-family:"Merriweather";
+    font-family: "Merriweather";
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
     line-height: 28px;
     text-transform: uppercase;
 }
-
 #footer-links-section {
     padding-left: 32px;
     padding-top: 32px;
     margin-bottom: 24px;
     height: 122px;
 }
-
 #footer-links-section ul {
     list-style: none;
 }
-
-#footer-links-section ul li{
+#footer-links-section ul li {
     height: 22px;
     margin-bottom: 8px;
 }
-
 #footer-links-section a {
     color: #333;
     font-family: "Merriweather";
@@ -393,7 +346,6 @@ footer{
     font-weight: 400;
     line-height: normal;
 }
-
 #footer-links-section ul li:first-child {
     margin-top: 16px;
 }
@@ -404,16 +356,13 @@ footer{
     margin-left: 308px;
     height: 122px;
 }
-
 #footer-links-section1 ul {
     list-style: none;
 }
-
-#footer-links-section1 ul li{
+#footer-links-section1 ul li {
     height: 22px;
     margin-bottom: 8px;
 }
-
 #footer-links-section1 a {
     color: #333;
     font-family: "Merriweather";
@@ -422,30 +371,24 @@ footer{
     font-weight: 400;
     line-height: normal;
 }
-
 #footer-links-section1 ul li:first-child {
     margin-top: 16px;
 }
-
 #footer-social-links-section {
     padding-left: 150px;
     padding-top: 32px;
 }
-
 #footer-social-links-section ul {
     list-style: none;
 }
-
 #footer-social-links-section ul li {
     height: 22px;
     margin-bottom: 8px;
 }
-
 #footer-social-links-section ul li:first-child {
     margin-top: 16px;
 }
-
-#footer-social-links-section a{
+#footer-social-links-section a {
     color: #333;
     font-family: "Merriweather";
     font-size: 16px;
@@ -453,18 +396,15 @@ footer{
     font-weight: 400;
     line-height: normal;
 }
-
 #footer-social-icons-section {
     display: block;
     margin-top: 182px;
     padding-left: 32px;
     position: absolute;
 }
-
 #footer-social-icons-section a {
     padding-right: 24px;
 }
-
 #footer-social-icons-section p {
     padding-top: 16px;
     color: #333;
@@ -474,16 +414,12 @@ footer{
     font-weight: 600;
     line-height: normal;
 }
-
 footer a {
-    text-decoration: none;      /* Remove underline */
+    text-decoration: none;
+    /* Remove underline */
 }
-
-
 /*Page 2 */
-
 /*cover photos */
-
 #our-gloves-photos img {
     width: 300px;
     height: 300px;
@@ -492,19 +428,16 @@ footer a {
     margin-bottom: 32px;
     border: 4px solid #E6DBFE;
 }
-
 #our-gloves-photos img :last-child {
     margin-right: 116px;
 }
-
 #gloves-list-section {
     margin-left: 32px;
 }
-
 #gloves-list-section h2 {
     width: 275px;
     color: #612999;
-    font-family:"Merriweather";
+    font-family: "Merriweather";
     font-size: 40px;
     font-style: normal;
     font-weight: 500;
@@ -515,7 +448,6 @@ footer a {
 #gloves-list-section ul {
     list-style: none;
 }
-
 #gloves-list-section ul li p {
     position: absolute;
     display: inline;
@@ -537,7 +469,6 @@ footer a {
     height: 36.6px;
     flex-shrink: 0;
 }
-
 .ellipse-page2 {
     height: 82px;
     width: 82px;
@@ -552,25 +483,17 @@ footer a {
     font-family: "Merriweather";
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    max-width: 500px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
 }
-
-/* .contact-form h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    font-family: "Merriweather";
-} */
 .contact-form .form-group {
     margin-bottom: 15px;
 }
-
 .contact-form .form-group label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
 }
-
 .contact-form .form-group input,
 .contact-form .form-group textarea {
     width: 100%;
@@ -579,13 +502,11 @@ footer a {
     border-radius: 4px;
     box-sizing: border-box;
 }
-
 .contact-form .form-group textarea {
     resize: vertical;
     height: 150px;
     max-height: 156px;
 }
-
 .contact-form .form-group button {
     width: 100%;
     padding: 10px 20px;
@@ -597,12 +518,9 @@ footer a {
     border-radius: 4px;
     cursor: pointer;
 }
-
-.contact-form .form-group
-button:hover {
+.contact-form .form-group button:hover {
     background-color: rgb(97, 41, 153, 0.5);
 }
-
 .special-heading {
     margin-left: 32px;
     font-family: "Merriweather";
