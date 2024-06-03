@@ -1,0 +1,20 @@
+{
+    "category": "Books",
+    "products": [
+        {
+            "id": "123",
+            "name": "Cinderella",
+            "price": 16.65
+        },
+        {
+            "id": "456",
+            "name": "Snow White",
+            "price": 7.03
+        },
+        {
+            "id": "789",
+            "name": "Mickey Mouse",
+            "price": 9.23
+        }
+    ]
+}
