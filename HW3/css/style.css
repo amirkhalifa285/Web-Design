@@ -10,13 +10,14 @@ header, main, footer, nav, aside, section, article, div {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    
-}
-
-html, body {
     height: 100%;
     margin: 0;
     overflow: hidden;
+}
+
+html {
+    height: 100%;
+    margin: 0;
 }
 
 header {
@@ -75,7 +76,27 @@ header span:hover {
     flex-wrap: wrap;
     gap: 10px;
     background-color: black;
-    overflow-y: auto;
+    overflow-y: auto; 
+    align-content: flex-start;
 }
 
+.rectangle {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: black;
+    position: relative;
+    padding-top: 5px;
+    box-sizing: border-box;
+    
+}
 
+.rectangle span {
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
