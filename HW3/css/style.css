@@ -68,9 +68,9 @@ header span:hover {
 }
 
 #wrapper {
-    width: 1000px; /* Set the width of the wrapper */
+    width: 1000px; 
     min-height: calc(100vh - 100px);
-    margin: 100px auto 0; /* Center the wrapper */
+    margin: 100px auto 0; 
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
