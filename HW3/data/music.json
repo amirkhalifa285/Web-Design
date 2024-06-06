@@ -1,9 +1,30 @@
 {
+    "title": "Spotify top 2024 songs",
     "songs": [
-        "Eminem - Houdini",
-        "Current Joys - Symphonia IX",
-        "505 - Arctic Monkeys",
-        "Romantic Homicide - d4vd",
-        "Rick Astley - Never Gonna Give You Up"
+        {
+            "id": 1,
+            "name": "Houdini",
+            "artist": "Eminem"
+        },
+        {
+            "id": 2,
+            "name": "Symphonia IX",
+            "artist": "Current Joys"
+        },
+        {
+            "id": 3,
+            "name": "505",
+            "artist": "Arctic Monkeys"
+        },
+        {
+            "id": 4,
+            "name": "Romantic Homicide",
+            "artist": "d4vd"
+        },
+        {
+            "id": 5,
+            "name": "Never Gonna Give You Up",
+            "artist": "Rick Astley"
+        }
     ]
 }

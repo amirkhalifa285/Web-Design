@@ -10,7 +10,7 @@ header, main, footer, nav, aside, section, article, div {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    height: 100%;
+    height: 100vh;
     margin: 0;
     overflow: hidden;
 }
@@ -30,6 +30,7 @@ header {
     padding: 0 20px;
     box-sizing: border-box;
     position: fixed;
+    z-index: 1000;
     top: 0;
     left: 0;
 }
@@ -74,15 +75,15 @@ header span:hover {
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px;
     background-color: black;
     overflow-y: auto; 
     align-content: flex-start;
 }
 
 .rectangle {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -99,4 +100,36 @@ header span:hover {
     top: 5px;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.songs {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.songs h1 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.songs ol {
+    list-style: decimal;
+    padding-left: 20px;
+    text-align: left;
+    width: 100%;
+    
+    
+}
+
+.songs ol li {
+    padding: 10px 0;
+    
 }

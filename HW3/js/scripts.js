@@ -71,13 +71,13 @@ function populateSongsInList(data) {
     wrapper.className = 'songs';
 
     const title = document.createElement('h1');
-    title.textContent = 'Spotify top 2024 songs';
+    title.textContent = data.title;
     wrapper.appendChild(title);
 
     const list = document.createElement('ol');
     data.songs.forEach(song => {
         const listItem = document.createElement('li');
-        listItem.textContent = song;
+        listItem.textContent = `${song.name} - ${song.artist}`;
         list.appendChild(listItem);
     });
     wrapper.appendChild(list);
