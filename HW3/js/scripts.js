@@ -1,6 +1,8 @@
 window.onload = () => {
     initRectangles();
     document.querySelector('header div:nth-child(2) span').onclick = switchRectanglesSongs;
+    document.querySelector('header div:first-child span').onclick = addRectangle;
+    document.querySelector('header div:last-child span').onclick = subtractRectangle;
 }
 
 const colors = ['lightcoral', 'lightgreen', 'lightblue', 'violet'];
@@ -49,9 +51,24 @@ function chooseRectangleColor() {
 }
 
 function addRectangle() {
+    const wrapper = document.getElementById('wrapper');
+    if (wrapper.className === 'rectangles') {
+        const rect = document.createElement('div');
+        rect.className = 'rectangle';
+        rect.textContent = letters[letterIndex % letters.length];
+        letterIndex++;
+        rect.style.backgroundColor = chooseRectangleColor();
+        wrapper.appendChild(rect);
+    }
 }
 
 function subtractRectangle() {
+    const wrapper = document.getElementById('wrapper');
+    if (wrapper.className === 'rectangles' && wrapper.lastChild) {
+        wrapper.removeChild(wrapper.lastChild);
+        letterIndex = Math.max(0, letterIndex - 1); // Ensure letter index doesn't go negative
+        colorIndex = (colorIndex - 1 + colors.length) % colors.length; // Cycle back color index
+    }
 }
 
 function switchRectanglesSongs() {
