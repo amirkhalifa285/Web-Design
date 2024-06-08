@@ -11,7 +11,7 @@ function chooseRectangleColor() {
     const color = colors[colorIndex];
     colorIndex = (colorIndex + 1) % colors.length;
     return color;
-}
+};
 
 function initRectangles() {
     const wrapper = document.getElementById('wrapper');
@@ -29,7 +29,7 @@ function initRectangles() {
     });
     colorIndex = 0;
     letterIndex = currLetters.length;
-}
+};
 
 function populateSongsInList(data) {
     const wrapper = document.getElementById('wrapper');
@@ -47,7 +47,7 @@ function populateSongsInList(data) {
         list.appendChild(listItem);
     });
     wrapper.appendChild(list);
-}
+};
 
 function initSongs() {
     fetch('../data/music.json')
@@ -62,7 +62,7 @@ function initSongs() {
         })
         // eslint-disable-next-line no-console
         .catch(err => console.error('Error fetching data...', err));
-}
+};
 
 function addRectangle() {
     const wrapper = document.getElementById('wrapper');
@@ -74,7 +74,7 @@ function addRectangle() {
         rect.style.backgroundColor = chooseRectangleColor();
         wrapper.appendChild(rect);
     }
-}
+};
 
 function subtractRectangle() {
     const wrapper = document.getElementById('wrapper');
@@ -83,7 +83,7 @@ function subtractRectangle() {
         letterIndex = Math.max(0, letterIndex - 1);
         colorIndex = (colorIndex - 1 + colors.length) % colors.length;
     }
-}
+};
 
 function switchRectanglesSongs() {
     const wrapper = document.getElementById('wrapper');
@@ -94,7 +94,7 @@ function switchRectanglesSongs() {
         initRectangles();
         document.querySelector('header div:nth-child(2) span').textContent = 'Switch to songs';
     }
-}
+};
 
 function enterName() {
     const name = document.getElementById('nameInput').value;
@@ -118,5 +118,4 @@ window.onload = () => {
     document.querySelector('header div:first-child span').onclick = addRectangle;
     document.querySelector('header div:last-child span').onclick = subtractRectangle;
     document.getElementById('submitName').onclick = enterName;
-
 };
