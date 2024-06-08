@@ -14,7 +14,6 @@ function chooseRectangleColor() {
 }
 
 function initRectangles() {
-    console.log('Initializing rectangles with letters:', inputLetters.join(''));
     const wrapper = document.getElementById('wrapper');
     wrapper.innerHTML = '';
     wrapper.className = 'rectangles';
@@ -81,8 +80,8 @@ function subtractRectangle() {
     const wrapper = document.getElementById('wrapper');
     if (wrapper.className === 'rectangles' && wrapper.lastChild) {
         wrapper.removeChild(wrapper.lastChild);
-        letterIndex = Math.max(0, letterIndex - 1); // Ensure letter index doesn't go negative
-        colorIndex = (colorIndex - 1 + colors.length) % colors.length; // Cycle back color index
+        letterIndex = Math.max(0, letterIndex - 1); 
+        colorIndex = (colorIndex - 1 + colors.length) % colors.length; 
     }
 }
 
@@ -98,7 +97,9 @@ function switchRectanglesSongs() {
 }
 
 function enterName() {
+    /* eslint-disable no-alert */
     const name = prompt('Enter your name:');
+    /* eslint-disable no-alert */
     if(name) {
         console.log('Name entered:', name);
         inputLetters = name.split('');
@@ -106,7 +107,7 @@ function enterName() {
         initRectangles();
         document.querySelector('header div:nth-child(3) span').onclick = null; //disable button after 1st use
         document.querySelector('header div:nth-child(3) span').style.cursor = 'not-allowed';
-
+        letterIndex = 0;
     }
 }
 

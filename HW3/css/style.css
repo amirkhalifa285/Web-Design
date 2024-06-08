@@ -10,9 +10,10 @@ header, main, footer, nav, aside, section, article, div {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
-    /* overflow: hidden; */
+    overflow: auto;
+    
 }
 
 html {
@@ -70,16 +71,15 @@ header span:hover {
 
 #wrapper {
     width: 1000px; 
-    /* min-height: calc(100vh - 100px); */
-    height: 100vh;
+    min-height: 100vh;
     margin: 100px auto 0; 
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     background-color: black;
-    overflow-y: auto; 
     align-content: flex-start;
+    overflow: visible;
 }
 
 .rectangle {
