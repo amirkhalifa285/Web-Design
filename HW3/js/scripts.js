@@ -2,8 +2,10 @@
 
 const colors = ['lightcoral', 'lightgreen', 'lightblue', 'violet'];
 const letters = 'AmirKhalifa'.split('');
+let inputLetters = letters.slice();
 let colorIndex = 0;
 let letterIndex = 0;
+let customNameEntered = false;
 
 function chooseRectangleColor() {
     const color = colors[colorIndex];
@@ -12,10 +14,12 @@ function chooseRectangleColor() {
 }
 
 function initRectangles() {
+    console.log('Initializing rectangles with letters:', inputLetters.join(''));
     const wrapper = document.getElementById('wrapper');
     wrapper.innerHTML = '';
     wrapper.className = 'rectangles';
-    letters.forEach(letter => {
+    const currLetters = customNameEntered ? inputLetters : letters;
+    currLetters.forEach(letter => {
         const rect = document.createElement('div');
         rect.className = 'rectangle';
         rect.style.backgroundColor = chooseRectangleColor();
@@ -25,7 +29,7 @@ function initRectangles() {
         wrapper.appendChild(rect);
     });
     colorIndex = 0;
-    letterIndex = letters.length;
+    letterIndex = currLetters.length;
 }
 
 function populateSongsInList(data) {
@@ -47,7 +51,7 @@ function populateSongsInList(data) {
 }
 
 function initSongs() {
-    fetch('data/songs.json')
+    fetch('../data/music.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok ' + response.statusText);
@@ -93,9 +97,24 @@ function switchRectanglesSongs() {
     }
 }
 
+function enterName() {
+    const name = prompt('Enter your name:');
+    if(name) {
+        console.log('Name entered:', name);
+        inputLetters = name.split('');
+        customNameEntered = true;
+        initRectangles();
+        document.querySelector('header div:nth-child(3) span').onclick = null; //disable button after 1st use
+        document.querySelector('header div:nth-child(3) span').style.cursor = 'not-allowed';
+
+    }
+}
+
 window.onload = () => {
     initRectangles();
     document.querySelector('header div:nth-child(2) span').onclick = switchRectanglesSongs;
     document.querySelector('header div:first-child span').onclick = addRectangle;
     document.querySelector('header div:last-child span').onclick = subtractRectangle;
+    document.querySelector('header div:nth-child(3) span').onclick = enterName;
+    
 };

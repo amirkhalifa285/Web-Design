@@ -1,0 +1,51 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header,
+main,
+footer,
+nav,
+aside,
+section {
+    display: block;
+}
+
+.navbar-brand {
+    color: red;
+}
+
+.navbar-nav .nav-link.active {
+    color: red;
+}
+
+body {
+    background-color: black;
+}
+
+.card {
+    /* width: 18rem; */
+    width: 450px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.btn.btn-netflix {
+    border-color: red;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.card img {
+    height: 250px;
+}
+
+
+
+
