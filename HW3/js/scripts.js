@@ -70,7 +70,7 @@ function addRectangle() {
         const rect = document.createElement('div');
         rect.className = 'rectangle';
         rect.textContent = letters[letterIndex % letters.length];
-        letterIndex += 1; 
+        letterIndex += 1;
         rect.style.backgroundColor = chooseRectangleColor();
         wrapper.appendChild(rect);
     }
@@ -80,8 +80,8 @@ function subtractRectangle() {
     const wrapper = document.getElementById('wrapper');
     if (wrapper.className === 'rectangles' && wrapper.lastChild) {
         wrapper.removeChild(wrapper.lastChild);
-        letterIndex = Math.max(0, letterIndex - 1); 
-        colorIndex = (colorIndex - 1 + colors.length) % colors.length; 
+        letterIndex = Math.max(0, letterIndex - 1);
+        colorIndex = (colorIndex - 1 + colors.length) % colors.length;
     }
 }
 
@@ -97,25 +97,26 @@ function switchRectanglesSongs() {
 }
 
 function enterName() {
-    /* eslint-disable no-alert */
-    const name = prompt('Enter your name:');
-    /* eslint-disable no-alert */
-    if(name) {
-        console.log('Name entered:', name);
+    const name = document.getElementById('nameInput').value;
+    if (name) {
         inputLetters = name.split('');
         customNameEntered = true;
         initRectangles();
-        document.querySelector('header div:nth-child(3) span').onclick = null; //disable button after 1st use
-        document.querySelector('header div:nth-child(3) span').style.cursor = 'not-allowed';
+        document.getElementById('submitName').onclick = null;
+        document.getElementById('nameInput').disabled = true;
+        document.getElementById('submitName').style.cursor = 'not-allowed';
+        document.getElementById('nameInput').style.cursor = 'not-allowed';
         letterIndex = 0;
     }
-}
+};
+
+
 
 window.onload = () => {
     initRectangles();
     document.querySelector('header div:nth-child(2) span').onclick = switchRectanglesSongs;
     document.querySelector('header div:first-child span').onclick = addRectangle;
     document.querySelector('header div:last-child span').onclick = subtractRectangle;
-    document.querySelector('header div:nth-child(3) span').onclick = enterName;
-    
+    document.getElementById('submitName').onclick = enterName;
+
 };

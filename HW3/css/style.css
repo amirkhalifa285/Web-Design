@@ -69,6 +69,23 @@ header span:hover {
     background-color: #d3d3d3;
 }
 
+header input[type="text"] {
+    padding: 5px;
+    margin-right: 10px;
+}
+
+header button {
+    padding: 5px 10px;
+    cursor: pointer;
+    border: 1px solid #000;
+    background-color: white;
+    color: black;
+}
+
+header button:hover {
+    background-color: #d3d3d3;
+}
+
 #wrapper {
     width: 1000px; 
     min-height: 100vh;
@@ -134,3 +151,4 @@ header span:hover {
     padding: 10px 0;
     
 }
+
